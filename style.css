@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'archia';
+    src: url(Font/Archia_Regular/Archia-Regular-Desktop/Archia-Regular.otf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'archia';
+}
+
+body {
+    background: linear-gradient(to bottom, white rgba(250, 235, 215, 0.373));
+}
+
+nav {
+    background-color: white;
+    background-attachment: fixed;
+    margin: 25px 0px;
+}
+
+.logo {
+    display: flex;
+    align-items: end;
+}
+
+.logo span {
+    font-size: 20px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+    position: relative;
+    z-index: 0;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background-color: #97c680;
+    z-index: -1;
+    top: 45px;
+}
+
+.nav-link:hover::before {
+    top: 23px;
+    transition-duration: .5s;
+}
+
+nav li {
+    overflow: hidden;
+}
+
+.anime-nav-btn {
+    top: -10px;
+    position: absolute;
+}
+
+.anime-nav-btn-sec {
+    background-color: antiquewhite;
+    width: 300%;
+    height: 150%;
+    top: -30px;
+    left: -75px;
+    background-color: rgba(0, 128, 0, 0.477);
+}
+
+.btn-nav {
+    padding: 10px 30px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-nav:nth-child(1) {
+    border-radius: 20px 0px 20px 20px;
+}
+
+.btn-nav:nth-child(2) {
+    border-radius: 10px;
+}
+
+.btn-nav::before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-color: rgba(0, 128, 0, 0.477);
+    border-top-left-radius: 60%;
+    border-top-right-radius: 60%;
+    transition: all 1.5s;
+    z-index: -1;
+}
+
+.btn-nav:hover::before {
+    top: -5px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+
+}
+
+.btn-nav:hover {
+    background: transparent;
+    transition-duration: 0.5s;
+    color: rgb(14, 123, 0);
+}
+
+.btn-nav {
+    border-radius: 0px;
+    width: max-content;
+    height: 30px;
+    border: none;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-nav {
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.btn-nav:hover {
+    animation: anime_nav_btn 1s;
+}
+
+.header-pictures {
+    display: flex;
+    gap: 30px;
+}
+
+.header-pictures-container {
+    height: 590px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.header-pictures-container:nth-child(1) {
+    background: url(avatar/avatar1.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+.header-pictures-container:nth-child(2) {
+    background: url(avatar/avatar2.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+.header-pictures-container:nth-child(3) {
+    background: url(avatar/avatar3.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+.header-pictures-container div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    margin-top: 75%;
+}
+
+.topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topic span {
+    font-size: small;
+}
+
+.form-search {
+    display: flex;
+    position: absolute;
+    left: 10vw;
+    top: 55vh;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.374);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.form-search:hover {
+    transform: rotateX(30deg) rotateY(5deg) rotateZ(-5deg);
+    box-shadow: -15px 25px 10px rgba(0, 0, 0, 0.374);
+    transition-duration: 0.5s;
+}
+
+.form-search input {
+    border: none;
+}
+
+.form-search input:nth-child(1) {
+    padding: 40px 80px;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+.form-search input:nth-child(1)::placeholder {
+    font-size: 1.4rem;
+}
+
+.form-search input:nth-child(2) {
+    padding: 0px 45px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 50px 0px;
+}
+
+header ul {
+    list-style: none;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    line-height: 90px;
+    padding-top: 70px;
+}
+
+
+.div-not-active {
+    width: 157px;
+}
+
+.div-not-active-display {
+    visibility: hidden;
+}
+
+.div-active {
+    width: 502px;
+}
+
+.div-active-display {
+    display: block;
+}
+
+.btn-form-nav {
+    z-index: 1;
+    background-color: #97c680;
+}
+
+.bg-input {
+    background-color: rgb(255, 174, 124);
+    width: 124px;
+    height: 125px;
+    position: absolute;
+    left: 417px;
+    top: 130px;
+    z-index: -1;
+}
+
+.bg-input-class-hover {
+    top: 0;
+    transition-duration: .8s;
+    cursor: pointer;
+}
+
+.bg-input-class-out {
+    top: 130px;
+    transition-duration: .8s;
+}
